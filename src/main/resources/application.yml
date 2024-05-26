@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: spring-batch-in-cation
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/choi?allowMultiQueries=true
+    username: root
+    password: 1234
+  batch:
+    job:
+      name: simpleJob
+      enabled: true
+    jdbc:
+      initialize-schema: never
