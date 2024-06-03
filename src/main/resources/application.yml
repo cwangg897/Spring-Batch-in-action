@@ -13,7 +13,7 @@ spring:
     password: 1234
   batch:
     job:
-      name: simpleJob
+      name: stepNextJob
       enabled: true
     jdbc:
       initialize-schema: never
