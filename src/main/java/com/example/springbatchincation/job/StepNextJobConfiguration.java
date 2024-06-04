@@ -31,7 +31,7 @@ public class StepNextJobConfiguration {
     public Step step1(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
         return new StepBuilder("step1", jobRepository)
                 .tasklet((contribution, chunkContext) -> {
-                    System.out.println(">>>>> This is Step1");
+                    System.out.println(">>>>> stepNextJob is Step1");
                     return RepeatStatus.FINISHED;
                 }, transactionManager).build();
     }
@@ -40,7 +40,7 @@ public class StepNextJobConfiguration {
     public Step step2(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
         return new StepBuilder("step2", jobRepository)
                 .tasklet((contribution, chunkContext) -> {
-                    System.out.println(">>>> This is Step2");
+                    System.out.println(">>>>> stepNextJob is Step2");
                     return RepeatStatus.FINISHED;
                 }, transactionManager).build();
     }
@@ -49,7 +49,7 @@ public class StepNextJobConfiguration {
     public Step step3(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
         return new StepBuilder("step3", jobRepository)
                 .tasklet((contribution, chunkContext) -> {
-                    System.out.println(">>>> This is Step3");
+                    System.out.println(">>>> stepNextJob is Step1 is Step3");
                     return RepeatStatus.FINISHED;
                 }, transactionManager).build();
     }
