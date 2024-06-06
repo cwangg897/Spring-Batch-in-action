@@ -1,16 +1,23 @@
 spring:
   application:
     name: spring-batch-in-cation
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
 
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/choi?allowMultiQueries=true
-    username: root
-    password: 1234
+    choi1:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/choi?allowMultiQueries=true
+      username: root
+      password: 1234
+    choi2:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/kusinsa?allowMultiQueries=true
+      username: root
+      password: 1234
+
   batch:
     job:
       name: ${job.name:NONE}
